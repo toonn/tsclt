@@ -1,0 +1,101 @@
+\documentclass[master=mai, masteroption=ecs, twoside]{kulemt}
+\setup{title={Valid Smart Contracts Through Types}, author={Toon Nolten},
+promotor={Prof.\,dr.\,ir.\ Bart Preneel
+  \and Dr.\,ir.\ Frederik Vercauteren},
+  assessor={TODO},
+assistant={TODO}}
+% De volgende \setup mag verwijderd worden als geen fiche gewenst is.
+%TODO
+\setup{filingcard, translatedtitle={Programming and Proofs in Dependently Typed
+  Languages}, udc=681.3, shortabstract={In this thesis we present two case
+    studies, both in Agda, a fully dependently typed programming language, and
+    in Haskell, a functional programming language with a Hindley-Milner style
+    type system. After formulating a model of a problem in Agda, we mimic this
+    model in Haskell, relying on Glasgow Haskell Compiler extensions to provide
+    type system features we lack in standard Haskell. We try to illustrate how
+    much, or little effort goes into static verification. And hint at reducing
+    reliance on test suites by encoding simple properties in our types.}}
+
+% TODO: toggle voor gedrukte versie?
+\usepackage[pdfusetitle,colorlinks,linkcolor=black,citecolor=black,urlcolor=black,plainpages=false]{hyperref}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[outputdir=_build]{minted}
+\usepackage{underscore}
+\usepackage{subcaption}
+\usepackage{import}
+\usepackage{textgreek}
+
+% Missing unicode characters for Agda
+\usepackage{MnSymbol}
+\DeclareUnicodeCharacter{"2237}{$\squaredots$}
+\DeclareUnicodeCharacter{"25C2}{$\blacktriangleleft$}
+\DeclareUnicodeCharacter{"25B8}{$\blacktriangleright$}
+\DeclareUnicodeCharacter{"1D9C}{$^{c}$}
+\DeclareUnicodeCharacter{"225F}{$\stackrel{?}{=}$}
+\DeclareUnicodeCharacter{"25A0}{$\blacksquare$}
+
+% More readable minted commands
+\newmintinline[iagda]{agda}{}
+\newmintinline[ihask]{haskell}{}
+
+\newmintedfile[inputagda]{agda}{}
+\newmintedfile[inputhaskell]{haskell}{}
+
+\begin{document}
+
+\begin{preface}
+%TODO
+\end{preface}
+
+\tableofcontents*
+
+\begin{abstract}
+%TODO
+\end{abstract}
+
+\mainmatter
+
+\include{introduction}
+%%%%%%%%%%%%%%%%%%%%
+% Chapters
+
+%\include{ch-TODO}
+
+% Chapters
+%%%%%%%%%%%%%%%%%%%%
+\include{conclusion}
+
+\appendixpage*
+\appendix
+%%%%%%%%%%%%%%%%%%%%
+% Appendices
+
+%TODO
+%\chapter{Red-Black Trees in Haskell}
+%  Eerst volgt de code van Okasaki dan de code voor de case en daarna nog een
+%  korte vertaling van de \iagda{if_the_else_} functie in Agda naar een functie
+%  op typeniveau in Haskell.
+%  \section{Okasaki}
+%  \inputhaskell[fontsize=\small, breaklines]{haskell-casestt/Okasaki.hs}
+%  \section{Red-Black Trees}
+%  \label{app:case-rbtree-haskell}
+%  \inputhaskell[fontsize=\small, breaklines]{haskell-casestt/RedBlackTree.hs}
+%  \section{Type Level If}
+%  \inputhaskell[fontsize=\small, breaklines]{haskell-casestt/if.hs}
+
+% Appendices
+%%%%%%%%%%%%%%%%%%%%
+
+\backmatter
+
+%%%%%%%%%%%%%%%%%%%%
+% References
+% Je kan de  standaard "abbrv" bibliografiestijl vervangen door een andere.
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+% References
+%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
