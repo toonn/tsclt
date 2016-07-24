@@ -81,8 +81,14 @@ transactions exactly like a person but it can also interact with other smart
 contracts and execute it's programming.
 This allows for transactions that implement voting, auctions or safe remote
 purchases of goods.
-
-%TODO How voting auction safe purchase works.
+The entire voting procedure could be made observable so it is transparent.
+You could have open or blinded auctions with a guarantee that the winner pays
+up by having everyone pay in advance while the beneficiary of the auction will
+only be able to collect the highest bid after the auction finishes.
+Remote purchases could be made safe by having the contract automatically escrow
+an amount exceeding the price for the good from the buyer, when the buyer
+receives the good they have to sanction the transaction of the appropriate
+amount to the seller if they want to have the exceeding amount refunded.
 
 \section{Solidity}
 
