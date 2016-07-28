@@ -97,7 +97,21 @@ define them.
 Currently the language Solidity is recommended by the Ethereum foundation but
 alternatives exist like Serpent and LLL.
 Solidity is inspired by Javascript and is a statically typed object-oriented
-language, also referred to as contract-oriented.
+language, also referred to as contract-oriented because instead of defining
+objects you define contracts.
+Even though Solidity is still very young as a language it looks like the
+developers do not intend to take advantage of a more advanced type system to
+prevent exceptions at runtime.
 
+There are four possible exceptional conditions on the Ethereum Virtual Machine.
+Simply running out of \emph{gas} during execution.
+Stack underflow, jumping to a bad destination and invalid opcodes are the other
+possibilities.
+In an attempt to minimize complexity all of these are treated as out of gas
+exceptions by the EVM.
 
 \section{Validity}
+
+The goal of this thesis is to formalize a language for Ethereum's smart
+contracts that statically guarantees an absence of the four possible exceptions
+through the use of a more advanced type system.
